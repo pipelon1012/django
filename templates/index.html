@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Listado de Contacto</title>
+</head>
+<body>
+<h1>Template de listado</h1>
+<table border="2">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for persona in personas %}
+    <tr>
+      <td>{{ persona.nombre }}</td>
+      <td>{{ persona.apellido }}</td>
+      <td>{{ persona.correo }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>
