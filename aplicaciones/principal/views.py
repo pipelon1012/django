@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Persona
+from .forms import PersonaForm
 
 
 def inicio(request):
@@ -10,4 +11,8 @@ def inicio(request):
     return render(request,'index.html',contexto)
 
 def crearPersona(request):
-    return render(request,'crear_persona.html')
+    form = PersonaForm()
+    contexto = {
+        'form':form
+    }
+    return render(request,'crear_persona.html',contexto)

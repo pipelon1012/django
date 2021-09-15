@@ -7,6 +7,7 @@
   <title>{% block titulo %}Listado de Contacto{% endblock titulo %}</title>
 </head>
 <body>
+  {% block cuerpo %}
 <h1>Template de listado</h1>
 <table border="2">
   <thead>
@@ -26,6 +27,6 @@
     {% endfor %}
   </tbody>
 </table>
-
+{% endblock cuerpo %}
 </body>
 </html>
